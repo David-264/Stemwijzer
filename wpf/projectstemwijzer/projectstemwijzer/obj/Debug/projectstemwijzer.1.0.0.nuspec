@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>projectstemwijzer</id>
+    <version>1.0.0</version>
+    <authors>projectstemwijzer</authors>
+    <description>Package Description</description>
+    <repository type="git" />
+    <dependencies>
+      <group targetFramework="net8.0-windows7.0">
+        <dependency id="MySQLConnection" version="1.0.1" exclude="Build,Analyzers" />
+        <dependency id="MySql.Data" version="9.3.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <frameworkReferences>
+      <group targetFramework="net8.0-windows7.0">
+        <frameworkReference name="Microsoft.WindowsDesktop.App.WPF" />
+      </group>
+    </frameworkReferences>
+  </metadata>
+  <files>
+    <file src="C:\Users\engel\OneDrive - Summacollege O365\school zooi\project stemwijzer\projectstemwijzer\projectstemwijzer\bin\Debug\net8.0-windows\projectstemwijzer.runtimeconfig.json" target="lib\net8.0-windows7.0\projectstemwijzer.runtimeconfig.json" />
+    <file src="C:\Users\engel\OneDrive - Summacollege O365\school zooi\project stemwijzer\projectstemwijzer\projectstemwijzer\bin\Debug\net8.0-windows\projectstemwijzer.dll" target="lib\net8.0-windows7.0\projectstemwijzer.dll" />
+  </files>
+</package>

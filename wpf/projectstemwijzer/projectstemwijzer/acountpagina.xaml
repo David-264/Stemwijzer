@@ -1,0 +1,114 @@
+﻿<Window x:Class="projectstemwijzer.acountpagina"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:projectstemwijzer"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Background="#352D27"
+        Icon="/fotos/neutraalkieslabfoto.ico"
+        Title="acountpagina" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="3*"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="4*"></ColumnDefinition>
+            <ColumnDefinition Width="1.5*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <DataGrid Grid.Row="1" Grid.Column="1" IsReadOnly="True" Background="#EAE6E3"  AutoGenerateColumns="False" Name="uitkomstveld">
+            <DataGrid.Columns>
+                <DataGridTextColumn Width="auto" Header="Email" Binding="{Binding Email}" />
+                <DataGridTextColumn Width="auto" Header="Gebruikersnaam" Binding="{Binding Gebruikersnaam}" />
+                <DataGridTextColumn Width="auto" Header="wachtwoord" Binding="{Binding Wachtwoord_hash}" />
+                <DataGridTextColumn Width="auto" Header="RolNaam" Binding="{Binding RolNaam}" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Grid Grid.Row="1" Grid.Column="2" Grid.RowSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="0.3*"></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition Height="0.3*"></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition Height="0.3*"></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition Height="0.3*"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="61.538"></ColumnDefinition>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Row="0" Grid.Column="1">
+                <Label Foreground="#EAE6E3" Content="email" />
+                <Border Background="#EAE6E3" CornerRadius="10" Padding="5">
+                    <TextBox x:Name="emailbox"  />
+                </Border>
+            </StackPanel>
+            <StackPanel Grid.Row="2" Grid.Column="1">
+                <Label Foreground="#EAE6E3" Content="gebruikersnaam" />
+                <Border Background="#EAE6E3" CornerRadius="10" Padding="5">
+                    <TextBox x:Name="gebruikersnaambox"  />
+                </Border>
+            </StackPanel>
+            <StackPanel Grid.Row="4" Grid.Column="1">
+                <Label Foreground="#EAE6E3" Content="wachtwoord" />
+                <Border Background="#EAE6E3" CornerRadius="10" Padding="5">
+                    <PasswordBox Name="wachtwoordbox" ></PasswordBox>
+                </Border>
+            </StackPanel>
+            <StackPanel Grid.Row="6" Grid.Column="1">
+                <Label Foreground="#EAE6E3" Content="rol" />
+                <Border Background="#EAE6E3" CornerRadius="10" Padding="5">
+                    <ComboBox Name="rolbox"></ComboBox>
+                </Border>
+            </StackPanel>
+            
+            
+
+        </Grid>
+        <Grid Grid.Row="0" Grid.Column="0" Grid.RowSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="0.4*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Row="1" Margin="0,40,0,0">
+                <Button Name="dashbordknop" Height="40" Background="#8D99AE" Margin="0,0,0,20" Click="dashbordknop_Click">dashboard</Button>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.ColumnSpan="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="20"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition Width="20"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition Width="20"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition Width="20"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Button Name="toevoegbtn" Background="#EAE6E3" Grid.Column="1" Click="toevoegbtn_Click">toevoegen</Button>                <Button Name="verwijderbtn" Background="#EAE6E3" Grid.Column="5" Click="verwijderbtn_Click">verwijderen</Button>
+                <Button Name="zoekbtn" Background="#EAE6E3" Grid.Column="6" Grid.ColumnSpan="2" Margin="20,0,0,0" Click="zoekbtn_Click">zoeken</Button>
+            </Grid>
+            <Button Name="gebruikersbutton" Background="#EAE6E3" Grid.Row="1" Grid.Column="0" Margin="20,0,0,0" Click="gebruikersbutton_Click">gebruikers</Button>
+            <Button Name="beheerbutton" Background="#EAE6E3" Grid.Row="1" Grid.Column="1" Margin="20,0,0,0" Click="beheerbutton_Click">beheer</Button>
+        </Grid>
+        <Button Name="resetfiltersbtn" Grid.Row="0" Grid.Column="2" Background="#985050" Click="resetfiltersbtn_Click" >reset filters</Button>
+    </Grid>
+</Window>

@@ -1,0 +1,554 @@
+:root {
+  --lichtgrijs: #EDF2F4;
+  --accentlicht: #8D99AE;
+  --donkerblauw: #2B2D42;
+  --zachtbeige: #EAE6E3;
+  --donkerbruin: #352D27;
+}
+body{
+    padding: 0;
+    margin: 0;
+    color: var(--zachtbeige)
+}
+@font-face {
+    font-family: inter;
+    src: url(Fonts/Inter/Inter-VariableFont_slnt\,wght.ttf);
+}
+@font-face {
+    font-family: quicksand;
+    src: url(Fonts/Quicksand/Quicksand-VariableFont_wght.ttf);
+}
+/* ========== FOOTER ========== */
+#footer-block {
+    background-color: #2B2D42;
+    width: 100%;
+    height: 8%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+/* ========== LOGIN STIJL ========== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#login-container {
+  background-color: var(--zachtbeige);
+  padding: 3rem 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+
+  /* Centrering zonder body aan te passen */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#login-logo {
+  width: 60px;
+  height: auto;
+  display: block;
+  margin: 0 auto 15px auto;
+}
+
+#login-naam {
+  color: var(--donkerblauw);
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+#login-title {
+  color: var(--donkerbruin);
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+}
+
+#login-form input[type="text"],
+#login-form input[type="email"],
+#login-form input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 1rem;
+  border: 1px solid var(--accentlicht);
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: white;
+  transition: border-color 0.3s ease;
+}
+
+#login-form input:focus {
+  outline: none;
+  border-color: var(--donkerblauw);
+}
+
+#login-button {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--donkerblauw);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+#login-button:hover {
+  background-color: var(--accentlicht);
+  color: var(--donkerblauw);
+}
+
+#login-error,
+#login-success {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+#login-error {
+  background-color: #ffe5e5;
+  color: #b20000;
+}
+
+#login-success {
+  background-color: #e6ffe6;
+  color: #207520;
+}
+
+#register-link {
+  font-size: 0.95rem;
+  margin-top: 1rem;
+}
+
+#register-link a {
+  color: var(--donkerblauw);
+  text-decoration: underline;
+}
+
+/* ========== DARK MODE ========== */
+body.dark-mode {
+    background-color: #121212;
+    color: #EAE6E3;
+}
+
+body.dark-mode #header-block {
+    background-color: #1F2937;
+}
+
+body.dark-mode #footer-block {
+    background-color: #111827;
+}
+
+body.dark-mode #login-container {
+    background-color: #1F1F1F;
+}
+
+body.dark-mode #login-title,
+body.dark-mode #login-naam,
+body.dark-mode #welcome-message {
+    color: #EAE6E3;
+}
+
+body.dark-mode #username-input,
+body.dark-mode #password-input {
+    background-color: #2B2D42;
+    color: #EAE6E3;
+    border: 1px solid #EAE6E3;
+}
+
+body.dark-mode #login-button {
+    background-color: #EAE6E3;
+    color: #2B2D42;
+}
+
+body.dark-mode .nav-knop {
+    color: #EAE6E3;
+}
+
+body.dark-mode .nav-knop:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ========== PARTIJEN-STIJLEN ========== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.partijen-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.pagina-titel {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--donkerblauw);
+  font-size: 2rem;
+}
+
+.partij-container {
+  background-color: white;
+  border: 1px solid var(--accentlicht);
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.partij-container:hover {
+  background-color: var(--lichtgrijs);
+}
+
+.partij-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  color: var(--donkerblauw);
+  font-size: 1.1rem;
+}
+
+.partij-body {
+  margin-top: 0.5rem;
+  display: none;
+  color: var(--donkerbruin);
+  font-size: 0.95rem;
+}
+
+.partij-body p {
+  margin: 0.5rem 0;
+  line-height: 1.4;
+}
+.partij-afbeelding {
+  width: 100%;
+  max-height: 150px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  background-color: white;
+  padding: 0.5rem;
+}
+
+header {
+  background-color: var(--donkerblauw);
+  padding: 1.5rem 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.navbar a {
+  color: var(--lichtgrijs);
+  text-decoration: none;
+  font-size: 1.25rem;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: var(--accentlicht);
+}
+
+.nav-icon img {
+  width: 40px;
+  height: 40px;
+}
+
+.home-content {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.home-content h1 {
+  font-size: 2.5rem;
+  color: var(--donkerbruin);
+}
+
+.home-content p {
+  font-size: 1.2rem;
+  color: var(--donkerblauw);
+}
+footer {
+  background-color: var(--accentlicht);
+  color: var(--zachtbeige);
+  text-align: center;
+  padding: 1.5rem 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-content p {
+  margin: 0;
+  font-size: 1rem;
+}
+.home-hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 1rem;
+  background-color: var(--zachtbeige);
+  min-height: calc(100vh - 160px); /* header + footer hoogte */
+}
+
+.hero-card {
+  background-color: var(--lichtgrijs);
+  padding: 3rem 2rem;
+  border-radius: 2rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 600px;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.hero-card h1 {
+  font-size: 2.5rem;
+  color: var(--donkerbruin);
+  margin-bottom: 1rem;
+}
+
+.hero-card p {
+  font-size: 1.2rem;
+  color: var(--donkerblauw);
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  background-color: var(--donkerblauw);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: var(--accentlicht);
+  color: var(--donkerblauw);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.verkiezingen-container {
+  max-width: 1000px;
+  margin: 8rem auto 4rem auto;
+  text-align: center;
+  padding: 0 1rem;
+  font-family: inter, sans-serif;
+}
+
+.verkiezingen-container h1 {
+  font-size: 2.5rem;
+  color: var(--donkerbruin);
+  margin-bottom: 2rem;
+}
+
+.verkiezingen-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.verkiezing-card {
+  background-color: white;
+  border: 2px solid var(--accentlicht);
+  border-radius: 20px;
+  padding: 2rem 1.5rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  font-family: quicksand, sans-serif;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+  overflow: hidden; /* voorkomt dat inhoud uitsteekt */
+  word-wrap: break-word; /* forceert afbreken van lange woorden */
+  white-space: normal; /* zorgt dat tekst netjes afloopt */
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.verkiezing-card:hover {
+  transform: scale(1.03);
+  background-color: var(--lichtgrijs);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.1);
+}
+
+.verkiezing-card h2 {
+  color: var(--donkerblauw);
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.verkiezing-card p {
+  color: var(--donkerbruin);
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+.stemwijzer-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.stemwijzer-card {
+  background-color: var(--accentlicht);
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 800px;
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.stemwijzer-card h1 {
+  color: var(--donkerblauw);
+  margin-bottom: 1rem;
+}
+
+.intro {
+  color: var(--donkerblauw);
+  font-style: italic;
+  margin-bottom: 2rem;
+}
+
+/* ===== VRAGEN BLOKKEN ===== */
+.vraag-container {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background-color: var(--accentlicht);
+  border-radius: 10px;
+  animation: fadeIn 0.5s ease-in;
+}
+
+.vraag-container h3 {
+  color: var(--donkerblauw);
+  margin-bottom: 0.5rem;
+}
+
+.vraag-tekst {
+  margin-bottom: 1rem;
+  color: var(--donkerbruin);
+}
+
+.opties {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.radio-label {
+    display: inline-block;
+    padding: 12px 20px;
+    margin: 5px;
+    border-radius: 8px;
+    border: 2px solid var(--accentlicht);
+    cursor: pointer;
+    background-color: var(--lichtgrijs);
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.radio-label input[type="radio"] {
+    display: none;
+}
+
+.radio-label.selected {
+    background-color: var(--accentlicht);
+    color: white;
+    border-color: var(--donkerblauw);
+}
+
+.radio-label:hover {
+  border-color: var(--accentlicht);
+  background-color: #e0e7ea;
+}
+
+.radio-label input {
+  display: none;
+}
+
+.radio-label span {
+  font-weight: bold;
+  color: var(--donkerbruin);
+}
+
+/* ===== VERGELIJK KNOP ===== */
+.vergelijk-knop {
+  background-color: var(--donkerblauw);
+  color: var(--white);
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.vergelijk-knop:hover {
+  background-color: var(--accentlicht);
+}
+.resultaten-lijst {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.resultaat-balk {
+  display: flex;
+  flex-direction: column;
+}
+
+.partij-naam {
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+  color: var(--donkerblauw);
+}
+
+.balk {
+  background-color: var(--lichtgrijs);
+  border-radius: 10px;
+  overflow: hidden;
+  height: 30px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.voortgang {
+  height: 100%;
+  background-color: var(--accentlicht);
+  color: var(--white);
+  font-weight: bold;
+  text-align: right;
+  padding: 0 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  transition: width 0.6s ease;
+  border-radius: 10px 0 0 10px;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
